@@ -1,0 +1,46 @@
+@import "../modules/variables";
+@import "../modules/mixins";
+@import "../modules/globales";
+
+.style-cierre {
+    background: linear-gradient(45deg, #0000a3 100%, #0000ff 100%);
+    background-size: cover;
+    padding: 2%;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+}
+@include tablet {
+    .cierre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.cierre{
+    display: block;
+    text-align: center;
+    .cierre_hijo {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    
+        h2 {
+            color: $clr_blanco;
+            font-weight: $regular;
+        }
+    }
+}
+
+
+.btn-secundario {
+    @include tablet {
+        display: inline-block;
+        justify-self: center;
+        margin-bottom: 10rem;
+    }
+    @include boton($clr_btn, 1.5rem, 5rem);
+    margin-top: 5rem;
+
+    &:hover, a {
+        background: $clr_btn_2;
+        color:$clr_blanco;
+    }
+}

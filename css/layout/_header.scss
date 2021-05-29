@@ -1,0 +1,150 @@
+@import "../modules/variables";
+@import "../modules/mixins";
+@import "../modules/globales";
+
+
+//Barra
+
+.barra {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin: 0 2rem;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 3rem;
+    }
+}
+
+.navegacion{
+    display:none;
+    @include tablet{
+        display: flex;
+        gap: 2rem;
+    }
+    a{
+        font-family: $fuenteTexto;
+        font-size: 2rem;
+        font-weight: $light;
+        color: $clr_negro;
+        text-shadow: 1px 1px black;
+
+        &:hover{
+            font-weight: $regular;
+            color: $clr_nav;
+        }
+    }
+}
+
+.mobile-respo{
+    @include tablet{
+        display:none;
+    }     
+    a { 
+            color: inherit;
+            text-decoration: none;
+            font-size: 2rem;
+            display: block;
+            padding: 10px 20px;
+            max-width: 100%;
+            background:none;
+            text-shadow: 1px 1px black;
+
+            &:hover{
+                color:$clr_nav;
+            }
+     }
+     li{
+        list-style: none;
+        text-align: center;
+     } 
+} 
+
+
+.mobile-respo input[type="checkbox"], .mobile-respo .fa-bars, .mobile-respo .fa-times {
+    position: absolute;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 1rem;
+    top: 0;
+    width: 48px;
+    height: 48px;  
+  }
+  .mobile-respo .fa-bars, .mobile-respo .fa-times {
+    font-size: 4.8rem;
+    pointer-events: none;
+  }
+   
+  .mobile-respo input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .mobile-respo {
+    color:$clr_negro;
+    position: relative; 
+   /* background: #123456;
+    min-height: 48px;*/
+  }
+
+  .mobile-respo ul {
+    display: none;
+    position: relative;
+    top:5rem;
+    right:4rem;
+    bottom:0;
+    left:0;
+    width: 20rem;
+    height: auto;
+    background:none ;
+   
+    
+
+  }
+   
+  .mobile-respo input:checked ~ ul {
+    display: block;
+  }
+   
+  .mobile-respo input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .mobile-respo input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+   
+//Titulo & texto
+.header_texto {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20rem;
+    }
+    a {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.botton {
+    @include tablet {
+        display: inline-block;
+        align-self: start;
+        margin-bottom: 10rem;
+    }
+    @include boton($clr_btn, 1.5rem, 8rem);
+    
+    &:hover, a {
+        background: $clr_btn_2;
+        color:$clr_blanco;
+    }
+}

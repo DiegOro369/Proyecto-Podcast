@@ -1,0 +1,51 @@
+@import "../modules/variables";
+@import "../modules/mixins";
+@import "../modules/globales";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+.texto_footer {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+
+    span {
+        font-weight: $semi_bold;
+    }
+}
+.social_media {
+    @include tablet {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    a {
+        padding-right: 2rem;
+        font-size: 3rem;
+        color: $clr_negro;
+
+        &:last-of-type{
+            padding-right: 0;
+        }
+
+        &:hover {
+            font-size: 8rem;
+            color:$clr_nav;
+        }
+    }
+}
+.texto_footer{
+    margin: 0;
+}

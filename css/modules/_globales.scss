@@ -1,0 +1,80 @@
+@import "./variables";
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*esto es para que 1rem equivalga 10 px y se puedan ajustar a todas las pantallas*/
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $fuenteTexto;
+}
+
+h1 {
+    font-family: $fuenteTitulo;
+    font-size: 6.2rem;
+    font-weight: $semi-bold;
+}
+h2 {
+    font-family: $fuenteTitulo;
+    font-size: 4.8rem;
+    font-weight: $regular;
+}
+h3 {
+    font-family: $fuenteTitulo;
+    font-size: 2.4rem;
+    font-weight: $light;
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*UTILIDADES*/
+
+span {
+    text-decoration: line-through;
+}
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+.separacion {
+    padding: 2rem;
+}
+
+
+
+.titulo{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10rem;
+    margin-bottom: 5rem;
+}

@@ -1,0 +1,24 @@
+
+//Recursos
+
+@import './modules/normalize';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+@import './modules/variables';
+@import './modules/mixins';
+@import './modules/globales';
+
+
+
+
+//layuot
+
+@import'./layout/header';
+@import'./layout/main';
+@import'./layout/section1';
+@import'./layout/galeria';
+@import'./layout/contenido';
+@import'./layout/cierre';
+@import'./layout/footer';
+
+
+

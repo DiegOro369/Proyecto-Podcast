@@ -1,0 +1,48 @@
+@import "./variables";
+
+//Media Query
+
+@mixin telefono {
+    @media (min-width:$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:$desktop) {
+        @content;
+    }
+}
+
+//Boton
+@mixin boton($bgColor, $tB, $lR){
+    display: block;
+    background-color: $bgColor;
+    padding: $tB $lR;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+    font-family: $fuenteTexto;
+    font-size: 1.6rem;
+    font-weight: $regular;
+    color: $clr_negro;
+    margin-top: 4rem;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, .1);
+}
+
+//Grillas
+
+@mixin grid($columnas, $separacion, $filas){
+    display:grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: repeat($filas, 1fr);
+    column-gap: $separacion;
+    row-gap: $separacion;
+}
+
