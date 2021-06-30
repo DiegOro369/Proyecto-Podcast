@@ -819,7 +819,7 @@ span {
     */
 }
 
-@media (min-width: 450px) {
+@media (min-width: 768px) {
   .poligono {
     padding: 6rem 0;
   }
@@ -889,22 +889,31 @@ span {
 .titulo_podcats {
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
-  padding: 2rem 0;
-  margin-left: 10rem;
-  text-align: left;
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 1rem;
   color: #fff;
   font-weight: 400;
 }
 
-.podcats {
-  border-radius: 0.5rem;
-  padding-bottom: 2rem;
+@media (min-width: 768px) {
+  .titulo_podcats {
+    text-align: left;
+    padding-top: 1rem;
+    margin-left: 10rem;
+  }
+}
+
+.podcats iframe {
   width: 100%;
-  height: 100%;
+  height: 232px;
+  border: 0px;
+  background-color: transparent;
+  margin-bottom: 10px;
 }
 
 .podcats:last-of-type {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 html {
@@ -998,7 +1007,7 @@ span {
   margin-bottom: 5rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 400px) {
   .flex-phone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1148,7 +1157,7 @@ span {
   margin-bottom: 5rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 400px) {
   .galeria {
     margin: 2rem auto;
     max-width: 100%;
